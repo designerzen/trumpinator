@@ -1,0 +1,99 @@
+body{
+	font-family: 'PT Sans', sans-serif;
+	font-weight:700;
+}
+
+h1,h2,h3,h4,h5,h6{
+  text-transform:uppercase;
+	font-size:1.5em;
+	line-height:1.4;
+	letter-spacing:1px;
+}
+h1,h3{
+	font-weight:400;
+}
+p{
+	font-size:1.2em;
+	line-height:1.4;
+}
+#bernie{
+  position:relative;
+  display:block;
+}
+
+#bernie header{
+  position:absolute;
+
+  bottom:10%;
+  left:10%;
+  right:30%;
+	background-color:rgba( 0,0,255, 0.5);
+	color:white;
+}
+
+#bernie header h1,
+#bernie header h2{
+	padding:0.6% 0.9%;
+}
+
+#bernie header h1{
+	float:left;
+	background-color:#0000ee;
+	padding-right:0.9%;
+}
+#bernie header h2{
+	background-color:#fff;
+	color:#0000ee;
+	padding-left:5.6%;
+}
+#bernie header h3{
+	padding:0.3% 1.6%;
+	color:yellow;
+}
+#bernie header h3:before{
+	content:'';
+	position:Absolute;
+	top:0;
+	left:0;
+	rght:0;
+	height:3px;
+	background-color:yellow;
+}
+#bernie header p{
+	padding:0.3% 1.6% 0.9% 1.6%;
+}
+
+#tweets {
+  height: 38.1%;
+  width: 35.7%;
+  border: 1px solid white;
+  display:block;
+  position:absolute;
+  right:3.64%;
+  top:7.6%;
+  overflow:hidden;
+  background-color:white;
+  transform-origin: 0 0;
+  transform:matrix3d(
+    0.9540269737641875,	0.027696512946097283,	0,	-0.00005195596189053812,
+    -0.028108321556537537,	1.0299547060760865,	0,	0.00005039899712347379,
+    0,	0,	1,	0,
+    40,	5,	0,	1
+  )
+}
+
+.twitter-timeline{
+
+}
+
+.bg{
+  position:relative;
+  z-index:-1;
+}
+
+.copyright{
+  position:absolute;
+  z-index:99;
+  bottom:0;
+  right:0;
+}
