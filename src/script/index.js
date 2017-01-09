@@ -1,6 +1,3 @@
-// Import inline styles
-import styles from './../style/style';
-
 // Import libs to save images to your hard drive...
 import DOMtoImage from 'dom-to-image';
 import FileSaver from 'file-saver';

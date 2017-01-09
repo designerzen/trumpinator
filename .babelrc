@@ -1,11 +1,9 @@
 {
-    "presets": [
-        "es2015"
-    ],
-    "plugins": [
-    ],
-    "sourceMaps":"false",
-    "compact":"true",
-    "minified":"true",
-    "comments":"false"
+  "presets": [
+    ["latest", {
+      "es2015": true,
+      "es2016": true,
+      "es2017": true
+    }]
+  ]
 }
