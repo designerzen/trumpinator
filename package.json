@@ -31,9 +31,10 @@
   },
   "scripts": {
     "start": "npm run script | npm run server",
-    "server": "http-server build",
+    "server": "webpack-server build",
     "style": "postcss --config postcss.config.js",
-    "script": "node_modules\\.bin\\webpack --config ./webpack.config.js",
-    "deploy": "node_modules\\.bin\\webpack --config ./webpack.config.js --optimize-minimize -p"
+    "script": "webpack --config ./webpack.config.js",
+    "deploy": "webpack --config ./webpack.config.js --optimize-minimize -p",
+    "distribute": "gh-pages"
   }
 }
