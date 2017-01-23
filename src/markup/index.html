@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Trumpinator Tweet</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=PT+Sans:400,700'>
 </head>
 
 <body>
@@ -21,8 +19,8 @@
     </header>
 
     <figure id="board-of-shame">
-      <div id="tweets" class="box">
-      	<a class="twitter-timeline loading"
+      <div id="tweets" class="loading">
+      	<a class="twitter-timeline"
       		 href="https://twitter.com/realDonaldTrump"
       		 data-width="350"
       		 data-height="505"
@@ -34,10 +32,20 @@
     </figure>
 
     <footer>
-      by @designerzen
+      <h6>Made with love by</h6>
+      <a class="twitter-follow-button"
+          href="https://twitter.com/designerzen"
+          data-size="large"
+          data-show-count="false"
+          data-show-screen-name="true">by @designerzen</a>
     </footer>
 
   </main>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" charset="utf-8"></script>
+  <!-- 
+  <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+  <script src="app.js" charset="utf-8"></script>
 </body>
 </html>

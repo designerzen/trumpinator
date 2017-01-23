@@ -1,3 +1,7 @@
+@import url(./reset.css);
+@import url(./twitter.css);
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+
 body{
 	font-family: 'PT Sans', sans-serif;
 	font-weight:700;
@@ -6,6 +10,7 @@ body{
 h1,h2,h3,h4,h5,h6{
   text-transform:uppercase;
 	font-size:1.5em;
+	font-size:2.3vmin;
 	line-height:1.4;
 	letter-spacing:1px;
 }
@@ -13,20 +18,24 @@ h1,h3{
 	font-weight:400;
 }
 p{
-	font-size:1.2em;
+	font-size:90%;
 	line-height:1.4;
 }
+
+
 #bernie{
   position:relative;
   display:block;
+	/* set min sizes */
 }
 
 #bernie header{
   position:absolute;
-
   bottom:10%;
   left:10%;
-  right:30%;
+	min-width:500px;
+	max-width:60%;
+	background-color:#0000ff;
 	background-color:rgba( 0,0,255, 0.5);
 	color:white;
 }
@@ -64,22 +73,42 @@ p{
 }
 
 #tweets {
-  height: 38.1%;
-  width: 35.7%;
+
   border: 1px solid white;
+	background-color:white;
+  transform-origin: 0 0;
+
   display:block;
   position:absolute;
+	overflow:hidden;
+
+	right: 20.15%;
+	top: 8%;
+	left: 51.45%;
+	bottom: 55.7%;
+/*
+	transform:matrix3d(
+    0.9540269737641875,	0.027696512946097283,	0,	-0.00005195596189053812,
+    -0.028108321556537537,	1.0299547060760865,	0,	0.00005039899712347379,
+    0,	0,	1,	0,
+    0,	0,	0,	1
+  );
+
   right:3.64%;
   top:7.6%;
-  overflow:hidden;
-  background-color:white;
-  transform-origin: 0 0;
+	left:10%;
+	bottom:20%;
+
+	height: 38.1%;
+  width: 35.7%;
+
   transform:matrix3d(
     0.9540269737641875,	0.027696512946097283,	0,	-0.00005195596189053812,
     -0.028108321556537537,	1.0299547060760865,	0,	0.00005039899712347379,
     0,	0,	1,	0,
     40,	5,	0,	1
   )
+	*/
 }
 
 .twitter-timeline{
@@ -89,6 +118,7 @@ p{
 .bg{
   position:relative;
   z-index:-1;
+	max-width:100%;
 }
 
 .copyright{
@@ -97,3 +127,6 @@ p{
   bottom:0;
   right:0;
 }
+
+
+/* Make sure we don't shrink less than... */

@@ -1,17 +1,22 @@
 import path from 'path';
+//import ResourceHintWebpackPlugin from 'resource-hints-webpack-plugin';
+//import IndexHtmlPlugin from 'indexhtml-webpack-plugin';
+//import AutoInjectPlugin from 'auto-inject-webpack-plugin';
 
-const source = "src";
+const source = path.join(__dirname, 'src');
+const output = path.join(__dirname, 'build');
 
 export default
 {
   //context: __dirname,
 
   entry: {
-    app: path.join(__dirname, source, 'app')
+    'app': path.join( source, 'app.js'),
+    //'index.html': path.join(__dirname, source, 'markup', 'index.html')
   },
 
   output: {
-    path: path.join(__dirname, 'build'),
+    path: output,
     filename: '[name].js'
   },
 
@@ -34,35 +39,44 @@ export default
           "html-loader"
         ]
       },
-      // IMAGES
+      /*
+      // SMALL IMAGES
       {
-        test: /\.(png|jpg|gif)$/,
-        loader: "url-loader?limit=5000&name=[path][name].[ext]"
+        test: /\.(jpg|gif)$/,
+        loader: "url-loader?limit=50&name=[path][name].[ext]"
       },
       {
-        test: /\.jpg$/, loader: "file-loader"
+        test: /\.png$/, loader: "url-loader?limit=50&name=[path][name].[ext]&mimetype=image/png"
       },
+*/
+      // BIG IMAGES
       {
-        test: /\.png$/, loader: "url-loader?mimetype=image/png"
-      },
-      // STYLES
+        test: /\.(png|jpg|gif)$/, loader: "file-loader"
+      },// STYLES
       {
         test: /\.css$/,
       //  exclude: /(node_modules|bower_components)/,
         loaders:[
           'style-loader',
-          'css-loader?modules&importLoaders=1',
+          // ?modules&importLoaders=1
+          'css-loader',
           'postcss-loader'
         ]
       }
 
     ]
   },
-  extensions: [".js", ".json", ".jsx", ".css", ".html"]
-  /*
-  resolve: {
-    extensions: [".js", ".json", ".jsx", ".css", ".html"]
-  },
+
+  plugins: [
+    /*
+    //new IndexHtmlPlugin('index.html', 'index.html')
+    new AutoInjectPlugin({
+      outputURI: output
+    })*/
+  ],
+
+  extensions: [".js", ".json", ".jsx", ".css", ".html"],
+
   //target: "web",
   // Custom options
   //htmlLoader: {
@@ -70,7 +84,10 @@ export default
     //root: path.resolve(__dirname, 'assets'),
     //attrs: ['img:src', 'link:href']
   //},
+
+
   // What information should be printed to the console?
+  /*
    stats: {
        colors: true,
        reasons: true,
@@ -81,5 +98,6 @@ export default
        chunkModules: true,
        cached: true,
        cachedAssets: true
-    }*/
+    }
+    */
 }
