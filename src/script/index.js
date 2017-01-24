@@ -3,6 +3,7 @@
 // Import libs to save images to your hard drive...
 import DOMtoImage from 'dom-to-image';
 import FileSaver from 'file-saver';
+import Tweets from './tweets';
 
 // Fetch the main element that the app lives within
 const element = document.getElementById('bernie');
@@ -86,6 +87,13 @@ console.log("Loading Twitter API");
 window.addEventListener("load", function onPage() {
   console.log("Page loaded" );
   //loadTweets( tweeter, elementTimeline );
+
+  let tweets = new Tweets();
+  const options = {};
+  tweets.load( options, function(){
+
+  });
+
 });
 
 
@@ -100,4 +108,4 @@ twttr.ready( function onTwitter() {
 */
 
 // Import ther configurator to create the angled board
-import Config from './transform.js';
+// import Transformer from './transformer.js';

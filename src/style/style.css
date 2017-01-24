@@ -73,42 +73,22 @@ p{
 }
 
 #tweets {
-
   border: 1px solid white;
 	background-color:white;
-  transform-origin: 0 0;
 
   display:block;
   position:absolute;
 	overflow:hidden;
 
-	right: 20.15%;
-	top: 8%;
-	left: 51.45%;
-	bottom: 55.7%;
-/*
-	transform:matrix3d(
-    0.9540269737641875,	0.027696512946097283,	0,	-0.00005195596189053812,
-    -0.028108321556537537,	1.0299547060760865,	0,	0.00005039899712347379,
-    0,	0,	1,	0,
-    0,	0,	0,	1
-  );
+	right: 20.09%;
+	top: 7.85%;
+	left: 51.35%;
+	height: 36.3%;
+	/* replace height for bottom...
+	bottom: 55.6%;*/
 
-  right:3.64%;
-  top:7.6%;
-	left:10%;
-	bottom:20%;
-
-	height: 38.1%;
-  width: 35.7%;
-
-  transform:matrix3d(
-    0.9540269737641875,	0.027696512946097283,	0,	-0.00005195596189053812,
-    -0.028108321556537537,	1.0299547060760865,	0,	0.00005039899712347379,
-    0,	0,	1,	0,
-    40,	5,	0,	1
-  )
-	*/
+	transform-origin: 0 0;
+	transform: matrix3d(0.975846, 0.0287041, 0, -0.0000648756, -0.0272197, 1.03424, 0, 0.0000467516, 0, 0, 1, 0, 0, -2.2, 0, 1);
 }
 
 .twitter-timeline{
